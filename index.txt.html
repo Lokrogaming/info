@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage 2</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div id="wrap" >
+        <div id="header">
+          HEADER
+        </div>
+         <div id="navigation">
+         <button class="sidebarActivator btn md color-black" id="sidebarBtn">&#9776;</button>
+        </div>
+        <div id="content">
+          <button id="btnBig1" class="btn big color-blue">Klick mich</button>
+        </div>
+        <div id="sidebar">
+          <button class="sidebarCloseBtn btn md color-red" id="sidebarBtnClose">&#9932;</button>
+        </div>
+</div>
+<script>
+    /* === ELEMENTS === */
+const buttonEl = document.getElementById("btnBig1");
+
+const sidebarActivatorEl = document.getElementById("sidebarBtn");
+const sidebarEl = document.getElementById("sidebar");
+const sidebarCloseEl = document.getElementById("sidebarBtnClose");
+
+buttonEl.addEventListener("click", () => {
+    const buttonClassList = buttonEl.classList;
+    if (buttonClassList.contains("color-blue")) {
+        buttonEl.classList.remove("color-blue");
+        buttonEl.classList.add("color-red");
+    } else if (buttonClassList.contains("color-red")) {
+        buttonEl.classList.remove("color-red");
+        buttonEl.classList.add("color-green");
+    } else if (buttonClassList.contains("color-green")) {
+        buttonEl.classList.remove("color-green");
+        buttonEl.classList.add("color-black");
+    } else if (buttonClassList.contains("color-black")) {
+        buttonEl.classList.remove("color-black");
+        buttonEl.classList.add("color-blue");
+    }
+});
+
+sidebarActivatorEl.addEventListener("click", () => {
+       
+        sidebarEl.classList.add("active");
+        sidebarActivatorEl.style = "display: none;";
+});
+sidebarCloseEl.addEventListener("click", () => {
+
+        sidebarEl.classList.remove("active");
+        sidebarActivatorEl.style ="display: flex";
+
+})
+    
+</script>
+</body>
+</html>
