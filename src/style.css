@@ -57,6 +57,9 @@
       /* === Standart color, kann auch im <script>-Teil geändert werden === */
       
       --color: white;
+
+      /* === SEPARATORR COLOR FÜR UNKNOWN UND ERROR BEREICHE === */
+      --separator-color-red: rgb(255, 0, 0);
   }
   html {
           scroll-behavior: smooth;
@@ -87,6 +90,9 @@
     
     .separator.solid {
         border-bottom: 1px solid var(--separator-color);
+    }
+    .separator.separator-color-red {
+        border-bottom: 2px dotted var(--separator-color-red);
     }
     
     .separator.dotted {
