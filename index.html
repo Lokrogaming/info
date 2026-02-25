@@ -25,12 +25,12 @@
             <div class="separator solid"></div>
             <h5>Projects</h5>
             <div class="separator solid"></div>
-            <button class="btn big color-green btn-link" data-targetURl="https://lgg.lovable.app">LGG</button>
-            <button class="btn big color-blue btn-link" data-targetURl="https://lokrogaming.github.io/crypting">Crypting</button>
-            <button class="btn big color-twitch btn-link" data-targetURl="https://twitch.tv/lokrogamer">Twitch</button>
-            <button class="btn big color-black btn-link" data-targetURl="unknown.html">Share.IO (in development)</button>
-            <button class="btn big color-darkgreen btn-link" data-targetURl="https://sec-chat.lovable.app">Sec-Chat Encrypted</button>
-            <button class="btn big color-neon btn-link" data-targetURl="unknown.html">Nucord Development</button>
+            <button class="btn big color-green" onclick="window.location.href='https://lgg.lovable.app'">LGG</button>
+            <button class="btn big color-blue" onclick="window.location.href='https://lokrogaming.github.io/crypting'">Crypting</button>
+            <button class="btn big color-twitch" onclick="window.location.href='https://twitch.tv/lokrogamer'">Twitch</button>
+            <button class="btn big color-black" onclick="window.location.href='unknown.html'">Share.IO (in development)</button>
+            <button class="btn big color-darkgreen" onclick="window.location.href='https://sec-chat.lovable.app'">Sec-Chat Encrypted</button>
+            <button class="btn big color-neon" onclick="window.location.href='unknown.html'">Nucord Development</button>
         </div>
         <div id="sidebar">
           <button class="sidebarCloseBtn btn md color-red" id="sidebarBtnClose">&#9932;</button>
@@ -136,25 +136,7 @@ themeBtnBloodmoon.addEventListener("click", () => {
     document.body.style.backgroundImage = "url('src/bloodmoonBG.png')";
 });
 
-/* === LINK LOGIK ZEUGS (BITTE NICHT BEACHTEN, SIEHT SCHLIMM AUS) */
 
-
-    /* Kopfschmerzen */
-
-    const btnBigLinkEls = document.querySelectorAll(".btn-link");
-
-btnBigLinkEls.forEach(button => {
-    button.addEventListener("click", function() {
-       
-        const target = this.dataset.targetURl; 
-        
-        if (target) {
-            window.location.href = target;
-        } else {
-            console.error("URL nicht gefunden für:", this);
-        }
-    });
-});
 </script>
 </body>
 </html>

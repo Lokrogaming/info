@@ -52,8 +52,8 @@
       /* === EXTENDED COLOR VARIANTS === */
       --btn-lg-hovered-aqua: rgb(0, 145, 137);
       --btn-lg-unhovered-aqua: rgb(0, 145, 137, 0.3);
-
-      
+      --btn-lg-hovered-neon: linear-gradient(145deg,rgba(255, 0, 0, 1) 0%, rgba(21, 251, 155, 0.75) 44%, rgba(72, 97, 239, 1) 77%, rgba(237, 83, 222, 1) 100%);
+      --btn-lg-unhovered-neon: linear-gradient(145deg,rgba(255, 0, 0, 0.75) 0%, rgba(21, 251, 155, 0.75) 44%, rgba(72, 97, 239, 0.75) 77%, rgba(237, 83, 222, 0.75) 100%);
       /* === Standart color, kann auch im <script>-Teil geändert werden === */
       
       --color: white;
@@ -287,6 +287,13 @@
     .color-discord:hover {
         background-color: var(--btn-lg-hovered-discord);
     }
+    .color-neon {
+        background: var(--btn-lg-unhovered-neon);
+    }
+    .color-neon:hover {
+        background: var(--btn-lg-hovered-neon);
+    }
+
 
 
 
