@@ -22,6 +22,15 @@
         </div>
         <div id="content">
           <button id="btnBig1" class="btn big color-green" disabled>HOME</button>
+            <div class="separator solid"></div>
+            <h5>Projects</h5>
+            <div class="separator solid"></div>
+            <button id="btnBigLink" class="btn big color-green" data-targetURl="https://lgg.lovable.app">LGG</button>
+            <button id="btnBigLink" class="btn big color-blue" data-targetURl="https://lokrogaming.github.io/crypting">Crypting</button>
+            <button id="btnBigLink" class="btn big color-twitch" data-targetURl="https://twitch.tv/lokrogamer">Twitch</button>
+            <button id="btnBigLink" class="btn big color-shareio" data-targetURl="unknown.html">Share.IO (in development)</button>
+            <button id="btnBigLink" class="btn big color-darkgreen" data-targetURl="https://sec-chat.lovable.app">Sec-Chat Encrypted</button>
+            <button id="btnBigLink" class="btn big color-grey" data-targetURl="unknown.html">Nucord Development</button>
         </div>
         <div id="sidebar">
           <button class="sidebarCloseBtn btn md color-red" id="sidebarBtnClose">&#9932;</button>
@@ -96,7 +105,7 @@ const sidebarCloseEl = document.getElementById("sidebarBtnClose");
 const themeResetEl = document.getElementById("resetThemes");
 const themeBtnDarkcosmic = document.getElementById("themeBtnDarkcosmic");
 const themeBtnBloodmoon = document.getElementById("themeBtnBloodmoon");
-
+const btnBigLinkEl = document.getElementById("btnBigLink");
 
 sidebarActivatorEl.addEventListener("click", () => {
        
@@ -127,9 +136,19 @@ themeBtnBloodmoon.addEventListener("click", () => {
     document.body.style.backgroundImage = "url('src/bloodmoonBG.png')";
 });
 
+/* === LINK LOGIK ZEUGS (BITTE NICHT BEACHTEN, SIEHT SCHLIMM AUS) */
 
+
+    /* MUSS GEFIXT WERDEN */
+
+    btnBigLinkEl.addEventListeer("click", () => {
+
+        let locationTarget = btnBigLinkEl.dataset.targetURl;
+        window.location.href = locationTarget;
+    });
 
 </script>
 </body>
 </html>
+
 
