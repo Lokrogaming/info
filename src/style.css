@@ -35,7 +35,10 @@
 
 
       /* === Custom Button Colors & Backgrounds für die Social Buttons */
-      --btn-style-color-twitch: #9146ff;
+      --btn-style-color-twitch: rgba(100,65,164);
+      --btm-style-color-twitch-unhovered: rgba(100,65,164, 0.3);
+      --btn-style-color-discord: rgba(114,137,218);
+      --btn-style-color-discord-unhovered: rgba(114,137,218, 0.3);
       /* === Abstände wegen Content div und sidebar === */
       --gap-items-content: 10px;
       --gap-sidebar-items: 15px;
@@ -275,5 +278,6 @@
         white-space: nowrap;
         overflow: hidden;
       }
+
 
 
