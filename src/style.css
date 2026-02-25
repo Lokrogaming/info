@@ -17,7 +17,7 @@
       --font-color: rgba(0, 0, 255, 1);
       --separator-color: white;
 
-      --btn-lg-unhovered-blue: rgba(0, 0, 255, 0.3);
+      --btn-lg-unhovered-blue: rgba(0, 0, 255, 0.5);
       --btn-lg-hovered-blue: rgba(0, 0, 255, 1);
       --btn-lg-unhovered-red: rgba(255, 0, 0, 0.3);
       --btn-lg-hovered-red: rgb(255, 0, 0);
@@ -29,23 +29,30 @@
       --btn-lg-hovered-purple: rgb(98, 0, 255);
       --btn-lg-unhovered-pink: rgba(247, 0, 255, 0.3);
       --btn-lg-hovered-pink: rgb(247, 0, 255);
-
+      --btn-lg-unhovered-darkgreen: rgba(56,125,50, 0.5);
+      --btn-lg-hovered-darkgreen: rgba(56,125,50);
       --btn-lg-unhovered-disabled: rgba(90, 90, 90, 0.3);
       --btn-lg-hovered-disabled: rgba(90, 90, 90, 1);
 
 
       /* === Custom Button Colors & Backgrounds für die Social Buttons */
-      --btn-style-color-twitch: rgba(100,65,164);
-      --btn-style-color-twitch-unhovered: rgba(100,65,164, 0.3);
-      --btn-style-color-discord: rgba(114,137,218);
-      --btn-style-color-discord-unhovered: rgba(114,137,218, 0.3);
+
+      /* === TWIITCH == */
+      --btn-lg-hovered-twitch: rgba(100,65,164);
+      --btn-lg-unhovered-twitch: rgba(100,65,164, 0.5);
+
+      /* === DISCORD === */
+      --btn-lg-hovered-discord: rgba(114,137,218);
+      --btn-lg-unhovered-discord: rgba(114,137,218, 0.3);
+      
       /* === Abstände wegen Content div und sidebar === */
       --gap-items-content: 10px;
       --gap-sidebar-items: 15px;
       
       /* === EXTENDED COLOR VARIANTS === */
-      --btn-style-color-aqua: rgb(0, 145, 137);
-      --btn-style-color-aqua-unhovered: rgb(0, 145, 137, 0.3);
+      --btn-lg-hovered-aqua: rgb(0, 145, 137);
+      --btn-lg-unhovered-aqua: rgb(0, 145, 137, 0.3);
+
       
       /* === Standart color, kann auch im <script>-Teil geändert werden === */
       
@@ -247,7 +254,7 @@
     }   
     .color-black:hover {
         background-color: var(--btn-lg-hovered-black);
-        color: rgba(90, 90, 90, 1)
+        color: white;
     }
     .color-purple {
         background-color: var(--btn-lg-unhovered-purple);
@@ -261,17 +268,24 @@
     .color-pink:hover {
         background-color: var(--btn-lg-hovered-pink);
     }
+    .color-darkgreen {
+        background-color: var(--btn-lg-unhovered-darkgreen);
+    }
+    .color-darkgreen:hover {
+        background-color: var(--btn-lg-hovered-darkgreen);
+    }
+
     .color-twitch {
-        background-color: var(--btn-style-color-twitch-unhovered);
+        background-color: var(--btn-lg-unhovered-twitch);
     }
     .color-twitch:hover {
-        background-color: var(--btn-style-color-twitch);
+        background-color: var(--btn-lg-hovered-twitch);
     }
     .color-discord {
-        background-color: var(--btn-style-color-discord-unhovere);
+        background-color: var(--btn-lg-unhovered-discord);
     }
     .color-discord:hover {
-        background-color: var(--btn-style-color-discord);
+        background-color: var(--btn-lg-hovered-discord);
     }
 
 
