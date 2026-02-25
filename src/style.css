@@ -33,6 +33,9 @@
       --btn-lg-unhovered-disabled: rgba(90, 90, 90, 0.3);
       --btn-lg-hovered-disabled: rgba(90, 90, 90, 1);
 
+
+      /* === Custom Button Colors & Backgrounds für die Social Buttons */
+      --btn-style-color-twitch: #9146ff;
       /* === Abstände wegen Content div und sidebar === */
       --gap-items-content: 10px;
       --gap-sidebar-items: 15px;
@@ -272,4 +275,5 @@
         white-space: nowrap;
         overflow: hidden;
       }
+
 
