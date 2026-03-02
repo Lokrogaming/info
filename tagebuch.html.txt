@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage 2</title>
+    <link rel="stylesheet" href="src/style.css">
+    
+</head>
+<body>
+    <div id="bg-blur">
+        
+    </div>
+    <div id="wrap">
+        <div id="header">
+            <div class="typebox">
+          <div class="typewriter" id="typewriter"></div>
+        </div>
+    </div>
+         <div id="navigation">
+         <button class="sidebarActivator btn md color-black" id="sidebarBtn">&#9776;</button>
+        </div>
+        <div id="content">
+          <button id="btnBig1" class="btn big color-green" disabled>HOME</button>
+            <div class="separator solid"></div>
+            <h2>Projekttagebuch</h2>
+            <div class="separator solid"></div><br><br>
+            <table>
+                <tr>
+                  <th>24.2.26</th>
+                  <th>25.2.26</th>
+                  <th>25.2.26</th>
+                  <th>25.2.26</th>
+                  <th>25.2.26</th>
+                  <th>25.2.26</th>
+                  <th>25.2.26</th>
+                  <th>25.2.26</th>
+                </tr>
+                
+                <tr>
+                  <td><a href="https://github.com/Lokrogaming/info/commit/b49b9178f02575a214ea0742831b909a9fd7dfba">b49b917</a><br> Created <em>index.html | src/style.css</em></td>
+                  <td><a href="https://github.com/Lokrogaming/info/commit/7c44746cd412169bb7524097327deb48bc0d5894">7c44746</a><br> Uploaded <em>src/darkCosmicBG.png | src/bloodmoonBG.png</em></td>
+                  <td><a href="https://github.com/Lokrogaming/info/commit/fc99f438be7a21814da051c1ed552efb54f178a9">fc99f43</a><br> Enchance home with typewriter effect and more button styles. <em>CHANGES: </em> <em>index.html | src/style.css</em></td>
+                  <td><a href="https://github.com/Lokrogaming/info/commit/c0feff3c29fefec6c7ab307486428378d590bc14">c0feff3</a><br> Updated <em>index.html | src/style.css</em></td>
+                  <td><a href="https://github.com/Lokrogaming/info/commit/9f342861029f7c09fa3482d99a09e367e12ac2c2">9f34286</a><br> Updated <em>index.html | src/style.css</em></td>
+                  <td><a href="https://github.com/Lokrogaming/info/commit/1d4402759c752fadc5b93a74ad725fba73ec3143">1d44027</a><br> Updated <em>src/style.css</em></td>
+                  <td><a href="https://github.com/Lokrogaming/info/commit/1639336960253d2fde45fb7f20c4176af4fe5ad4">1639336</a><br> Added & Updated <em> [+] unknown.html | [~] src/style.css | [~] index.html</em></td>
+                  <td><a href="https://github.com/Lokrogaming/info/commit/416adecf26c1a5a7db617ad97a90e4131952fb3d">416adec</a><br> Added support fr the unknown.html site in the linkBtns <em>[~] index.html</em></td>
+                </tr>
+              </table>
+        </div>
+        <div id="sidebar">
+          <button class="sidebarCloseBtn btn md color-red" id="sidebarBtnClose">&#9932;</button>
+          <div class="separator solid"></div>
+          <h1>Themes</h1>
+          <div class="separator dotted"></div>
+          <button class="btn md color-red" id="resetThemes">Reset</button>
+          <button class="btn md bg-darkcosmic" id="themeBtnDarkcosmic">DarkCosmic</button>
+          <button class="btn md bg-bloodmoon" id="themeBtnBloodmoon">BloodMoon</button>
+        </div>
+</div>
+
+
+
+
+
+<script>
+
+
+    /* === ELEMENTS === */
+const buttonEl = document.getElementById("btnBig1");
+
+const root = document.documentElement;
+const sidebarActivatorEl = document.getElementById("sidebarBtn");
+const sidebarEl = document.getElementById("sidebar");
+const sidebarCloseEl = document.getElementById("sidebarBtnClose");
+const themeResetEl = document.getElementById("resetThemes");
+const themeBtnDarkcosmic = document.getElementById("themeBtnDarkcosmic");
+const themeBtnBloodmoon = document.getElementById("themeBtnBloodmoon");
+
+
+sidebarActivatorEl.addEventListener("click", () => {
+       
+        sidebarEl.classList.add("active");
+        sidebarActivatorEl.style = "display: none;";
+});
+sidebarCloseEl.addEventListener("click", () => {
+
+        sidebarEl.classList.remove("active");
+        sidebarActivatorEl.style ="display: flex";
+
+});
+
+themeResetEl.addEventListener("click", () => {
+    document.body.style.backgroundImage = "";
+    root.style.setProperty("--color","white");
+});
+
+/* === THEME BUTTONS AND HELPERS === */
+themeBtnDarkcosmic.addEventListener("click", () => {
+    
+    root.style.setProperty('--color', 'white');
+    document.body.style.backgroundImage = "url('src/darkCosmicBG.png')";
+    
+});
+themeBtnBloodmoon.addEventListener("click", () => {
+    
+    root.style.setProperty('--color', 'white');
+    document.body.style.backgroundImage = "url('src/bloodmoonBG.png')";
+    
+});
+
+
+</script>
+</body>
+</html>
+
+
