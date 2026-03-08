@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage 2</title>
+    <link rel="stylesheet" href="src/style.css">
+    
+</head>
+<body>
+    <div id="bg-blur">
+        
+    </div>
+    <div id="wrap">
+        <div id="header">
+            <div class="typebox">
+          <div class="typewriter" id="typewriter"></div>
+        </div>
+    </div>
+         <div id="navigation">
+         <button class="btn md color-black active navitem" onclick="alert('Page already loaded!')">Home</button>
+         <button class="btn sm color-blue" onclick="open('/tagebuch.html')">Projekttagebuch</button>
+        </div>
+        <div id="content">
+          <button id="btnMd1" class="btn big color-green" disabled>HOME</button>
+            <div class="separator solid"></div>
+            <h2>Projects</h2>
+            <div class="separator solid"></div>
+            <button class="btn big color-green" onclick="window.location.href='https://lgg.lovable.app'">LGG</button>
+            <button class="btn big color-blue" onclick="window.location.href='https://lokrogaming.github.io/crypting'">Crypting</button>
+            <button class="btn big color-twitch" onclick="window.location.href='https://twitch.tv/lokrogamer'">Twitch</button>
+            <button class="btn big color-black" onclick="window.location.href='unknown.html?errorpath=wkjelwjewkjelejklj.html'">Share.IO (in development)</button>
+            <button class="btn big color-darkgreen" onclick="window.location.href='https://sec-chat.lovable.app'">Sec-Chat Encrypted</button>
+            <button class="btn big color-neon" onclick="window.location.href='unknown.html?errorpath=pqibuwepuqcbu.html'">Nucord Development</button>
+        </div>
+        <div id="sidebar">
+          <button class="sidebarCloseBtn btn md color-red" id="sidebarBtnClose">&#9932;</button>
+          <div class="separator solid"></div>
+          <h1>Themes</h1>
+          <div class="separator dotted"></div>
+          <button class="btn md color-red" id="resetThemes">Reset</button>
+          <button class="btn md bg-darkcosmic" id="themeBtnDarkcosmic">DarkCosmic</button>
+          <button class="btn md bg-bloodmoon" id="themeBtnBloodmoon">BloodMoon</button>
+        </div>
+</div>
+
+
+
+<script>
+(function() {
+    const texts = [
+      "Willkommen!",
+      "欢迎!",
+      "いらっしゃいませ！",
+      "Welcome!",
+      "Bem-vindo!",
+      "Witamy!",
+      "accueillir!",
+      "salve!",
+      "Hoş geldin!",
+      "Ahlan wa sahla!",
+      "!مرحباً",
+      "bienvenido!",
+      "καλωσόρισμα!",
+      "Benvenuto!",
+      "welkom!",
+      "Karibu!",
+      "Akwaaba!",
+      "Wamukelekile!",
+      "Kaabo!",
+      "Soo dhawow!",
+      "Takulandirani!"
+    ];
+  
+    let textIndex = 0;   
+    let charIndex = 0;  
+    let isDeleting = false;
+    const typingSpeed = 100; 
+    const deletingSpeed = 50; 
+    const delayBetween = 3000; 
+  
+    const element = document.getElementById("typewriter");
+  
+    function type() {
+      const currentText = texts[textIndex];
+      
+      if (isDeleting) {
+        
+        charIndex--;
+      } else {
+        
+        charIndex++;
+      }
+  
+      element.textContent = currentText.substring(0, charIndex);
+  
+      if (!isDeleting && charIndex === currentText.length) {
+        
+        isDeleting = true;
+        setTimeout(type, delayBetween);
+        return;
+      } else if (isDeleting && charIndex === 0) {
+        
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+      }
+  
+      setTimeout(type, isDeleting ? deletingSpeed : typingSpeed);
+    }
+  
+    type();
+  })();
+  </script>
+  <script>
+  function open(url) {
+    let redirectConfirmation = confirm("Redirecting to '" + url + "'");
+    if (redirectConfirmation === true) {
+       window.open(url, "_blank");
+  } else {
+    alert("Redirect canceled!");
+  }
+  }
+  </script>
+</body>
+</html>
