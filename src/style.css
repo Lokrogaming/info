@@ -399,8 +399,8 @@
       }
 
       .card {
-          height: 500px;
-          width: 300px;
+          height: auto;
+          width: 750px;
           border-radius: 14px;
           padding: 30px;
           border: none;
@@ -409,11 +409,12 @@
           align-items: center;
           justify-content: center;
           background-color: rgba(255, 145, 0, 0.3);
-          gap: 2px;
+          gap: 10px;
+          
       }
       .filecard {
         height: auto;
-        width: 250px;
+        width: 300px;
         min-height: 50px;
         word-break: normal;
         padding: 10px;
@@ -426,7 +427,7 @@
         font-family: "Google Sans Code", monospace;
       }
       .filecard.changed {
-        background-color: rgb(99, 72, 0);
+        background-color: rgb(255, 187, 0);
       }
       .filecard.created {
           background-color: rgb(0, 121, 6)
@@ -437,4 +438,10 @@
       ul.no-dots {
           list-style-type: none;
       } 
-
+      summary {
+        list-style-type: 'V ';
+        cursor: pointer;
+      } 
+      details[open] > summary {
+        list-style-type: '^ ';
+      }

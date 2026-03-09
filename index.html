@@ -19,19 +19,19 @@
     </div>
          <div id="navigation">
          <button class="btn md color-black active navitem" onclick="alert('Page already loaded!')">Home</button>
-         <button class="btn sm color-blue" onclick="open('/tagebuch.html')">Projekttagebuch</button>
+         <button class="btn sm color-blue" onclick="openLink('tagebuch.html')">Projekttagebuch</button>
         </div>
         <div id="content">
           <button id="btnMd1" class="btn big color-green" disabled>HOME</button>
             <div class="separator solid"></div>
             <h2>Projects</h2>
             <div class="separator solid"></div>
-            <button class="btn big color-green" onclick="window.location.href='https://lgg.lovable.app'">LGG</button>
-            <button class="btn big color-blue" onclick="window.location.href='https://lokrogaming.github.io/crypting'">Crypting</button>
-            <button class="btn big color-twitch" onclick="window.location.href='https://twitch.tv/lokrogamer'">Twitch</button>
-            <button class="btn big color-black" onclick="window.location.href='unknown.html?errorpath=wkjelwjewkjelejklj.html'">Share.IO (in development)</button>
-            <button class="btn big color-darkgreen" onclick="window.location.href='https://sec-chat.lovable.app'">Sec-Chat Encrypted</button>
-            <button class="btn big color-neon" onclick="window.location.href='unknown.html?errorpath=pqibuwepuqcbu.html'">Nucord Development</button>
+            <button class="btn big color-green" onclick="openLink('https://lgg.lovable.app')">LGG</button>
+            <button class="btn big color-blue" onclick="openLink('https://lokrogaming.github.io/crypting')">Crypting</button>
+            <button class="btn big color-twitch" onclick="openLink('https://twitch.tv/lokrogamer')">Twitch</button>
+            <button class="btn big color-black" onclick="openLink('unknown.html?errorpath=wkjelwjewkjelejklj.html')">Share.IO (in development)</button>
+            <button class="btn big color-darkgreen" onclick="openLink('https://sec-chat.lovable.app')">Sec-Chat Encrypted</button>
+            <button class="btn big color-neon" onclick="openLink('unknown.html?errorpath=pqibuwepuqcbu.html')">Nucord Development</button>
         </div>
         <div id="sidebar">
           <button class="sidebarCloseBtn btn md color-red" id="sidebarBtnClose">&#9932;</button>
@@ -112,7 +112,7 @@
   })();
   </script>
   <script>
-  function open(url) {
+  function openLink(url) {
     let redirectConfirmation = confirm("Redirecting to '" + url + "'");
     if (redirectConfirmation === true) {
        window.open(url, "_blank");

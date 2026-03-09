@@ -18,7 +18,7 @@
         </div>
     </div>
          <div id="navigation">
-         <button class="btn sm color-black" onclick="openLink('/index.html')">Home</button>
+         <button class="btn sm color-black" onclick="openLink('index.html')">Home</button>
          <button class="btn md color-blue navitem active" onclick="alert('Page already loaded!')"">Projekttagebuch</button>
         </div>
         <div id="content">
@@ -27,6 +27,7 @@
             <div class="separator solid"></div>
             <h2>Projekttagebuch</h2>
             <div class="separator dotted"></div><br><br>
+               <p>Verlauf der bearbeiteten Dateien anhand der Github Commits seit Erstellung (Initial commit b49b917) </p>
             <div class="card" id="GHCT">
             
               
@@ -218,12 +219,16 @@ function loadTable() {
 
     details.innerHTML = `
       <summary>
-        <a href="${data.link}" target="_blank">${key}</a> (${data.date})
+        ${key} (${data.date})
       </summary>
+      <a href="${data.link}" target="_blank">OPEN ON GITHUB :${key}</a>
       ${createdSection}
       ${changedSection}
       ${deletedSection}
-    `;
+        
+        <p> SHA256-KEY: ${data.sha256}</p>
+    
+      `;
 
     table.appendChild(details);
 
@@ -238,45 +243,6 @@ loadTable();
     /* === ELEMENTS === */
 const buttonEl = document.getElementById("btnBig1");
 
-const root = document.documentElement;
-const sidebarActivatorEl = document.getElementById("sidebarBtn");
-const sidebarEl = document.getElementById("sidebar");
-const sidebarCloseEl = document.getElementById("sidebarBtnClose");
-const themeResetEl = document.getElementById("resetThemes");
-const themeBtnDarkcosmic = document.getElementById("themeBtnDarkcosmic");
-const themeBtnBloodmoon = document.getElementById("themeBtnBloodmoon");
-
-
-sidebarActivatorEl.addEventListener("click", () => {
-       
-        sidebarEl.classList.add("active");
-        sidebarActivatorEl.style = "display: none;";
-});
-sidebarCloseEl.addEventListener("click", () => {
-
-        sidebarEl.classList.remove("active");
-        sidebarActivatorEl.style ="display: flex";
-
-});
-
-themeResetEl.addEventListener("click", () => {
-    document.body.style.backgroundImage = "";
-    root.style.setProperty("--color","white");
-});
-
-/* === THEME BUTTONS AND HELPERS === */
-themeBtnDarkcosmic.addEventListener("click", () => {
-    
-    root.style.setProperty('--color', 'white');
-    document.body.style.backgroundImage = "url('src/darkCosmicBG.png')";
-    
-});
-themeBtnBloodmoon.addEventListener("click", () => {
-    
-    root.style.setProperty('--color', 'white');
-    document.body.style.backgroundImage = "url('src/bloodmoonBG.png')";
-    
-});
 
 
 </script>
@@ -291,5 +257,4 @@ themeBtnBloodmoon.addEventListener("click", () => {
   </script>
 </body>
 </html>
-
 
