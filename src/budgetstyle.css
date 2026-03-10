@@ -65,9 +65,14 @@
       color: white;
       text-align: center;
   }
+  .wrap {
+    flex-direction: row;
+    display: flex;
+    gap: 20px;
+  }
   .content {
-      align-self: center;
-      width: 60vw;
+      
+      width: 70vw;
       height: auto;
       min-height: 100px;
       font-size: auto;
@@ -79,6 +84,46 @@
       padding: 20px;
       gap: 5px;
   }
+   #sidebar{
+    float: right;
+    width: 180px;
+    height: auto;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 14px;
+    border: solid 2px white;
+    border-radius: 13px;
+    transition: ease-in-out 0.5s;
+    gap: 5px;
+    padding: 15px;
+    color: white;
+    }
+    #sidebar a.navitem {
+    width: 100px;
+    border-bottom: solid 1px white;
+    padding: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition: ease-in-out 0.3s;
+    
+    }
+
+    #sidebar a.navitem:hover {
+    transform: scale(1.2);
+    transform: translateY(-7px);
+    border-bottom: dashed 2px white;
+    
+    }
+    
+    #sidebar a.navitem.end {
+      border: none !important;
+    }
+    
+
   .header {
     font-size: 4vw;
     border-bottom: white dotted 2px;
@@ -136,7 +181,7 @@
       transition: ease-in-out 0.3s;
     }
     .border-green-bottom-solid:hover {
-      border-bottom: lime 10px solid !important;
+      border-bottom: lime 10px solid;
     }
 
     .active:hover{
@@ -156,6 +201,7 @@
   button, a {
     text-decoration: none;
     cursor: pointer;
+    color: white;
   }
   /*=== MD BUTTON ===*/
   .btn.md {
@@ -300,4 +346,87 @@
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+ 
+
+
+
+
+.budget-input{
+padding:10px;
+border-radius:8px;
+border:none;
+width:200px;
+font-family:"ArialRoundedMTBold";
+}
+
+.budget-grid{
+display:flex;
+flex-direction:column;
+gap:10px;
+align-items:center;
+width:100%;
+}
+
+.transaction-table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+.transaction-table th{
+border-bottom:2px solid white;
+padding:10px;
+}
+
+.transaction-table td{
+padding:8px;
+border-bottom:1px solid rgba(255,255,255,0.3);
+}
+
+.income-row{
+color:lime;
+}
+
+.expense-row{
+color:red;
+}
+
+.history-box{
+width:100%;
+max-height:300px;
+overflow-y:auto;
+}
+
+.balance-card{
+width:250px;
+height:120px;
+border-radius:15px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+font-size:20px;
+transition:all 0.5s ease;
+box-shadow:0 0 15px rgba(255,255,255,0.2);
+}
+
+.balance-green{
+background:rgba(0,255,0,0.2);
+border:2px solid lime;
+}
+
+.balance-yellow{
+background:rgba(255,200,0,0.2);
+border:2px solid orange;
+}
+
+.balance-red{
+background:rgba(255,0,0,0.2);
+border:2px solid red;
+}
+
+.balance-value{
+font-size:28px;
+font-weight:bold;
 }

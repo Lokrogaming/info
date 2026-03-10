@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budgettracker Help</title>
+<link rel="stylesheet" href="src/helpstyle.css">
+</head>
+<body>
+
+
+<h1 class="header">Budgettracker Help</h1>
+<div class="wrap">
+<div class="content">
+<h2 class="content-header">Getting Started</h2>
+<div class="help-section">
+<p>
+Der Budgettracker hilft dir dabei deine Einnahmen und Ausgaben zu verfolgen.
+Alle Daten werden lokal im Browser gespeichert (LocalStorage).
+</p>
+<p>
+Du kannst:
+</p>
+<ul>
+<li>Ein Budget festlegen</li>
+<li>Einnahmen hinzufügen</li>
+<li>Ausgaben mit Ort oder Kategorie hinzufügen</li>
+<li>Deine Transaktionen im Verlauf sehen</li>
+<li>Sehen wo du am meisten Geld ausgibst</li>
+</ul>
+</div>
+
+<h2 class="content-header">Funktionen</h2>
+<div class="help-section">
+<p><b>Budget setzen</b></p>
+<p>Lege fest wie viel Geld du insgesamt ausgeben möchtest.</p>
+<p><b>Einnahmen</b></p>
+<p>Füge Einkommen hinzu z.B. Taschengeld oder Gehalt.</p>
+<p><b>Ausgaben</b></p>
+<p>Trage ein wo du Geld ausgegeben hast (z.B. Essen, Amazon, Kino).</p>
+<p><b>Verlauf</b></p>
+<p>Alle Einnahmen und Ausgaben werden in einer Tabelle gespeichert.</p>
+<p><b>Ranking</b></p>
+<p>Der Tracker zeigt dir automatisch wo du am meisten Geld ausgibst.</p>
+</div>
+<h2 class="content-header">FAQ</h2>
+<div class="faq-box">
+<div class="faq-question">
+Werden meine Daten gespeichert?
+</div>
+<div>
+Ja. Alle Daten werden im LocalStorage deines Browsers gespeichert.
+Sie werden nicht an einen Server gesendet.
+</div>
+</div>
+<div class="faq-box">
+<div class="faq-question">
+Was passiert wenn ich meinen Browser lösche?
+</div>
+<div>
+Wenn du den Browser-Cache oder LocalStorage löschst, werden auch deine Budgetdaten gelöscht.
+</div>
+</div>
+<div class="faq-box">
+<div class="faq-question">
+Kann ich mein Budget zurücksetzen?
+</div>
+<div>
+Ja. Nutze den Reset-Button im Dashboard.
+</div>
+</div>
+<div class="faq-box">
+<div class="faq-question">
+Warum sehe ich Farben beim Budget?
+</div>
+<div>
+Die Budget-Card zeigt dir visuell wie viel Geld du noch übrig hast.
+Grün = viel Budget übrig.
+Rot = Budget fast aufgebraucht.
+</div>
+</div>
+</div>
+<div id="sidebar">
+<a onclick="openLink('budgettracker.html')">Home</a>
+<a onclick="openLink('dashboard.html')">Dashboard</a>
+<a onclick="alert('Page already loaded')">Help</a>
+<a onclick="openLink('index.html')">Parentsite</a>
+</div>
+</iv>
+<script>
+function openLink(url){
+let redirectConfirmation = confirm("Redirect to '"+url+"'?");
+if(redirectConfirmation){
+window.open(url,"_blank");
+}
+}
+</script>
+</body>
+</html>
