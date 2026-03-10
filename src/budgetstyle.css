@@ -269,3 +269,35 @@
 .color-neon:hover {
     background: var(--btn-lg-hovered-neon);
 }
+.scroll-hint {
+  height: 100px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;    
+  color: rgba(255, 255, 255, 0.315);
+  font-size: 0.9rem;
+  user-select: none;
+  cursor: default;
+  gap: 6px;
+  animation: fadeIn 1s ease forwards;
+}
+
+.arrow-down {
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
