@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgettracker</title>
+    <link rel="stylesheet" href="src/budgetstyle.css">
+    <meta name="google" content="notranslate">
+</head>
+<body>
+    <main id="main">
+     
+        <h1 class="header">Budget-tracker</h1>
+    
+    <div class="content">
+ 
+         <h1 class="content-header">Content</h1>
+         
+         <div id="navigation">
+
+             <button class="btn md color-aqua active" onclick="alert('Page already loaded!')">Budgettracker</button>
+         <button class="btn sm color-green" onclick="openLink('index.html')">Home</button>
+         <button class="btn sm color-purple" onclick="openLink('tagebuch.html')">Projekttagebuch</button>
+         </div>
+        <br>
+          <h2 class="font-bitcount border-red-full-dotted">Probleme beim sparen?</h2> 
+
+          <p class="border-green-bottom-solid">Probiere den kostenlosen Budgettracker</p> 
+    </div>
+
+
+</main>
+<script>
+        function openLink(url) {
+          let redirectConfirmation = confirm("Redirecting to '" + url + "'");
+          if (redirectConfirmation === true) {
+             window.open(url, "_blank");
+        } else {
+          alert("Redirect canceled!");
+        }
+        }
+        </script>
+</body>
+</html>
