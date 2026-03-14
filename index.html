@@ -35,24 +35,27 @@
         <div id="content">
           <button id="btnMd1" class="btn big color-green" disabled>HOME</button>
             <div class="separator solid"></div>
-            <h2>Projects</h2>
+            <h2>Lokrogamer</h2>
             <div class="separator solid"></div>
-            <button class="btn big color-green" onclick="openLink('https://lgg.lovable.app')">LGG</button>
-            <button class="btn big color-blue" onclick="openLink('https://lokrogaming.github.io/crypting')">Crypting</button>
-            <button class="btn big color-twitch" onclick="openLink('https://twitch.tv/lokrogamer')">Twitch</button>
-            <button class="btn big color-black" onclick="openLink('unknown.html?errorpath=wkjelwjewkjelejklj.html')">Share.IO (in development)</button>
-            <button class="btn big color-darkgreen" onclick="openLink('https://sec-chat.lovable.app')">Sec-Chat Encrypted</button>
-            <button class="btn big color-neon" onclick="openLink('unknown.html?errorpath=pqibuwepuqcbu.html')">Nucord Development</button>
+            <main>
+              <div class="langSelectorMenu">
+              <input type="checkbox" checked="true" id="langCBEnglish"><p>English / Englisch</p><br><h4>||</h4>
+              <input type="checkbox" id="langCBGerman"><p>German / Deutsch</p>
+              </div>
+              <div class="welcomer muted" id="welcomer-english">Hello 👋, I'm glad you looking after me. I've been waiting for you for days or even weeks... But... Finally you're here!</div>
+              <div class="welcomer muted" id="welcomer-deutsch">Hallo 👋, Ich freue mich, dass du hier mal vorbeischaust. Ich habe seit Tagen oder sogar Wochen hier auf dich gewartet... Aber... Endlich bist du da!</div>
+            
+               <div id="portfolio-english" class="portfolio">
+                 <h1 class="portfolio-header">Lokrogamer - Developer / Streamer</h1>
+
+                 <div class="avatar">LG</div>
+                 <h2 class="name">Lokrogamer</h2>
+                 <p class="real-name">(Erik)</p>
+               </div>
+            
+            </main>
         </div>
-        <div id="sidebar">
-          <button class="sidebarCloseBtn btn md color-red" id="sidebarBtnClose">&#9932;</button>
-          <div class="separator solid"></div>
-          <h1>Themes</h1>
-          <div class="separator dotted"></div>
-          <button class="btn md color-red" id="resetThemes">Reset</button>
-          <button class="btn md bg-darkcosmic" id="themeBtnDarkcosmic">DarkCosmic</button>
-          <button class="btn md bg-bloodmoon" id="themeBtnBloodmoon">BloodMoon</button>
-        </div>
+        
 </div>
 
 
@@ -121,6 +124,30 @@
   
     type();
   })();
+  </script>
+  <script>
+  const langSelElEnglish = document.getElementById("langCBEnglish");
+  const langSelElGerman = document.getElementById("langCBGerman");
+  const welcomerEnglishEl = document.getElementById("welcomer-english");
+  const welcomerGermanEl = document.getElementById("welcomer-deutsch");
+  const portfolioEnglish = document.getElementById("portfolio-english");
+  // const portfolioGerman = document.getElementById("portfolio-german");
+
+
+  langSelElEnglish.addEventListener("click", () => {
+      if(langSelElEnglish.checked === true) {
+        langSelElGerman.checked = false;
+        welcomerGermanEl.style.display = "none";
+        welcomerEnglishEl.style.display = "block";
+      }
+  });
+  langSelElGerman.addEventListener("click", () => {
+      if(langSelElGerman.checked === true) {
+        langSelElEnglish.checked = false;
+        welcomerGermanEl.style.display = "block";
+        welcomerEnglishEl.style.display = "none";
+      }
+  });
   </script>
   <script>
   function openLink(url) {
