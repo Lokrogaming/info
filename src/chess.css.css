@@ -1,0 +1,198 @@
+:root {
+    --bg-dark: #161512;
+    --sidebar-bg: #262421;
+    --chess-green: #81b64c;
+    --chess-green-hover: #a3d16a;
+    --text-light: #bababa;
+    --white: #ffffff;
+    --square-white: #ebecd0;
+    --square-green: #779556;
+    --accent: #43413e;
+    --highlight: rgba(255, 255, 0, 0.5);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.game-wrapper {
+    display: grid;
+    grid-template-columns: minmax(320px, 600px) 380px;
+    gap: 40px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#myBoard {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    position: relative;
+}
+
+/* Chess.com style move indicators */
+.highlight-dot {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    top: 40%;
+    left: 40%;
+    pointer-events: none;
+}
+
+.highlight-ring {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border: 6px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    top: 10%;
+    left: 10%;
+    pointer-events: none;
+}
+
+/* Square Overrides */
+.white-1e1d7 { background-color: var(--square-white) !important; }
+.black-3c85d { background-color: var(--square-green) !important; }
+.highlight-square { box-shadow: inset 0 0 3px 3px yellow; }
+
+.sidebar {
+    background-color: var(--sidebar-bg);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    height: fit-content;
+    border: 1px solid #333;
+}
+
+h1 {
+    margin: 0 0 25px 0;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h1::before {
+    content: '♟';
+    color: var(--chess-green);
+}
+
+.info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.status-card {
+    background: rgba(0,0,0,0.3);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid var(--chess-green);
+}
+
+.label {
+    color: var(--text-light);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #eee;
+}
+
+.button-stack {
+    display: grid;
+    gap: 12px;
+}
+
+button {
+    background-color: var(--chess-green);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 0 #5b8236;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    background-color: var(--chess-green-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #5b8236;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+button.secondary {
+    background-color: #312e2b;
+    color: #d1d1d1;
+    box-shadow: 0 4px 0 #1a1917;
+}
+
+button.secondary:hover {
+    background-color: #3c3934;
+    color: #fff;
+    box-shadow: 0 6px 0 #1a1917;
+}
+
+.history-container {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #3d3b38;
+}
+
+.pgn-display {
+    background: #111;
+    padding: 15px;
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-size: 13px;
+    border-radius: 8px;
+    color: #8b8987;
+    line-height: 1.8;
+    height: 100px;
+    overflow-y: auto;
+    border: 1px solid #222;
+}
+
+@media (max-width: 900px) {
+    body { overflow-y: auto; padding: 20px 10px; }
+    .game-wrapper {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+        gap: 20px;
+    }
+}
