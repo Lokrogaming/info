@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgettracker</title>
+    <link rel="stylesheet" href="src/articlestyle.css">
+    <meta name="google" content="notranslate">
+</head>
+<body>
+    <div id="bg-blur"></div>
+    <main id="main">
+        
+        <h1 class="header">Artikel</h1>
+    <div class="wrap">
+    <div class="content">
+ 
+         <h1 class="content-header">Minecraft</h1>
+         
+         <h2>Die Geschichte von Minecraft</h2>
+         
+    </div>
+    <div id="sidebar">
+
+        <a href="" class="navitem" id="navitem1">Home</a>
+        <a href="" class="navitem" id="navitem2">Dashboard</a>
+        <a href="" class="navitem" id="navitem3">Schach</a>
+        <a href="" class="navitem" id="navitem4">Tagebuch</a>
+
+
+    </div>
+   </div>
+
+
+</main>
+
+<script>
+        function openLink(url) {
+          let redirectConfirmation = confirm("Redirecting to '" + url + "'");
+          if (redirectConfirmation === true) {
+             window.open(url, "_blank");
+        } else {
+          alert("Redirect canceled!");
+        }
+        }
+</script>
+<script>
+
+ 
+
+  const navItemEl1 = document.getElementById("navitem1");
+  const navItemEl2 = document.getElementById("navitem2");
+  const navItemEl3 = document.getElementById("navitem3");
+  const navItemEl4 = document.getElementById("navitem4");
+
+  navItemEl1.addEventListener("click", ()=> {
+    openLink("index.html");
+  });
+  navItemEl2.addEventListener("click", ()=> {
+    openLink("dashboard.html");
+  });
+  navItemEl3.addEventListener("click", ()=> {
+    openLink("schach.html");
+  });
+  navItemEl4.addEventListener("click", ()=> {
+    openLink("tagebuch.html");
+  });
+
+  
+
+
+</script>
+
+</body>
+</html>

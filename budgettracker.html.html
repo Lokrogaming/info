@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgettracker</title>
+    <link rel="stylesheet" href="src/budgetstyle.css">
+    <meta name="google" content="notranslate">
+</head>
+<body>
+    <main id="main">
+        
+        <h1 class="header">Budget-tracker</h1>
+    <div class="wrap">
+    <div class="content">
+ 
+         <h1 class="content-header">Menü</h1>
+         
+         <div id="navigation">
+
+             <button class="btn md color-aqua active" onclick="alert('Page already loaded!')">Budgettracker</button>
+         <button class="btn sm color-green" onclick="openLink('index.html')">Home</button>
+         <button class="btn sm color-purple" onclick="openLink('tagebuch.html')">Projekttagebuch</button>
+         </div>
+        <br>
+          <h2 class="font-bitcount border-red-full-dotted">Probleme beim Sparen?</h2> 
+
+          <p class="border-green-bottom-solid">Probiere den kostenlosen Budgettracker</p> 
+
+        <br><br><br>
+          <div class="scroll-hint" aria-hidden="true">
+                <div class="arrow-down">
+                    <svg fill="currentColor" width="80px" height="80px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M849.973.011v1497.931L486.9 1134.871 331 1290.772 960.228 1920l629.228-629.228-155.901-155.901-363.071 363.071V.011z" fill-rule="evenodd"/>
+                    </svg></div>
+                <span class="scroll-text">scroll für mehr infos</span> 
+    </div>
+    </div>
+    <div id="sidebar">
+
+        <a class="navitem" id="navitem1">Home</a>
+        <a class="navitem" id="navitem2">Dashboard</a>
+        <a class="navitem" id="navitem3">Help</a>
+        <a class="navitem" id="navitem4">Parentsite</a>
+
+
+    </div>
+   </div>
+
+
+</main>
+
+<script>
+        function openLink(url) {
+          let redirectConfirmation = confirm("Redirecting to '" + url + "'");
+          if (redirectConfirmation === true) {
+             window.open(url, "_blank");
+        } else {
+          alert("Redirect canceled!");
+        }
+        }
+</script>
+<script>
+
+ 
+
+  const navItemEl1 = document.getElementById("navitem1");
+  const navItemEl2 = document.getElementById("navitem2");
+  const navItemEl3 = document.getElementById("navitem3");
+  const navItemEl4 = document.getElementById("navitem4");
+
+  navItemEl1.addEventListener("click", ()=> {
+    openLink("budgettracker.html");
+  });
+  navItemEl2.addEventListener("click", ()=> {
+    openLink("dashboard.html");
+  });
+  navItemEl3.addEventListener("click", ()=> {
+    openLink("help.html");
+  });
+  navItemEl4.addEventListener("click", ()=> {
+    openLink("index.html");
+  });
+
+  
+
+
+</script>
+
+</body>
+</html>

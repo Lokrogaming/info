@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage 2</title>
+    <link rel="stylesheet" href="src/style.css">
+    
+</head>
+<body>
+    <div id="bg-blur">
+        
+    </div>
+    <div id="wrap">
+        <div id="header">
+            <div class="typebox">
+          <div class="typewriter" id="typewriter"></div>
+        </div>
+    </div>
+         <div id="navigation">
+         <button class="btn sm color-purple" onclick="openLink('budgettracker.html')">Budgettracker</button>
+         <button class="btn sm color-black" onclick="openLink('index.html')">Home</button>
+         <button class="btn md color-blue navitem active" onclick="alert('Page already loaded!')">Projekttagebuch</button>
+        </div>
+        <div id="content">
+            <p>Du befindest dich auf:</p>
+          <button id="btnBig1" class="btn big color-green" disabled>Projekttagebuch</button>
+            <div class="separator solid"></div>
+            <h2>Projekttagebuch</h2>
+            <div class="separator dotted"></div><br><br>
+               <p>Verlauf der bearbeiteten Dateien anhand der Github Commits seit Erstellung (Initial commit b49b917) </p>
+            <div class="card" id="GHCT">
+            
+              
+            
+            </div>
+            
+        </div>
+        <div id="sidebar">
+          <button class="sidebarCloseBtn btn md color-red" id="sidebarBtnClose">&#9932;</button>
+          <div class="separator solid"></div>
+          <h1>Themes</h1>
+          <div class="separator dotted"></div>
+          <button class="btn md color-red" id="resetThemes">Reset</button>
+          <button class="btn md bg-darkcosmic" id="themeBtnDarkcosmic">DarkCosmic</button>
+          <button class="btn md bg-bloodmoon" id="themeBtnBloodmoon">BloodMoon</button>
+        </div>
+</div>
+
+
+
+
+<script>
+const GHCList = [
+  {
+    "b49b917": {
+      "desc": "Erste Dateien wurden erstellt und hochgeladen",
+      "date": "24.2.2026",
+      "link": "https://github.com/Lokrogaming/info/commit/b49b9178f02575a214ea0742831b909a9fd7dfba",
+      "files": {
+        "created": ["index.html", "src/style.css"]
+      },
+      "sha256": "b49b9178f02575a214ea0742831b909a9fd7dfba"
+    }
+  },
+  {
+    "7c44746": {
+      "date": "24.2.2026",
+      "desc": "Hintergrundbilder wurden hochgeladen und eingefügt",
+      "link": "https://github.com/Lokrogaming/info/commit/7c44746cd412169bb7524097327deb48bc0d5894",
+      "files": {
+        "created": ["src/darkCosmicBG.png", "src/bloodmoonBG.png"]
+      },
+      "sha256": "7c44746cd412169bb7524097327deb48bc0d5894"
+    }
+  },
+  {
+    "fc99f43": {
+      "date": "25.2.2026",
+      "desc": "Dateien wurden geupdated",
+      "link": "https://github.com/Lokrogaming/info/commit/fc99f438be7a21814da051c1ed552efb54f178a9",
+      "files": {
+        "changed": ["index.html", "src/style.css"]
+      },
+      "sha256": "fc99f438be7a21814da051c1ed552efb54f178a9"
+    }
+  },
+  {
+    "c0feff3": {
+      "date": "25.2.2026",
+      "desc": "Dateien wurden geupdated",
+      "link": "https://github.com/Lokrogaming/info/commit/c0feff3c29fefec6c7ab307486428378d590bc14",
+      "files": {
+        "changed": ["index.html", "src/style.css"]
+      },
+      "sha256": "c0feff3c29fefec6c7ab307486428378d590bc14"
+    }
+  },
+  {
+    "9f34286": {
+      "date": "25.2.2026",
+      "desc": "Dateien wurden geupdated",
+      "link": "https://github.com/Lokrogaming/info/commit/9f342861029f7c09fa3482d99a09e367e12ac2c2",
+      "files": {
+        "changed": ["index.html", "src/style.css"]
+      },
+      "sha256": "9f342861029f7c09fa3482d99a09e367e12ac2c2"
+    }
+  },
+  {
+    "1d44027": {
+      "date": "25.2.2026",
+      "desc": "style wurde geupdated",
+      "link": "https://github.com/Lokrogaming/info/commit/1d4402759c752fadc5b93a74ad725fba73ec3143",
+      "files": {
+        "changed": ["src/style.css"]
+      },
+      "sha256": "1d4402759c752fadc5b93a74ad725fba73ec3143"
+    }
+  },
+  {
+    "1639336": {
+      "date": "25.2.2026",
+      "desc": "Errorseite wurde erstellt und wurde in die anderen Dateien eingefügt",
+      "link": "https://github.com/Lokrogaming/info/commit/1639336960253d2fde45fb7f20c4176af4fe5ad4",
+      "files": {
+        "created": ["unknown.html"],
+        "changed": ["src/style.css", "index.html"]
+      },
+      "sha256": "1639336960253d2fde45fb7f20c4176af4fe5ad4"
+    }
+  },
+  {
+    "416adec": {
+      "date": "25.2.2026",
+      "desc": "Index wurde geupdated",
+      "link": "https://github.com/Lokrogaming/info/commit/416adecf26c1a5a7db617ad97a90e4131952fb3d",
+      "files": {
+        "changed": ["index.html"]
+      },
+      "sha256": "416adecf26c1a5a7db617ad97a90e4131952fb3d"
+    }
+  },
+  {
+    "4d41431": {
+      "date": "26.2.2026",
+      "desc": "Style wurde geupdated",
+      "link": "https://github.com/Lokrogaming/info/commit/1639336960253d2fde45fb7f20c4176af4fe5ad4",
+      "files": {
+        "changed": ["src/style.css"]
+      },
+      "sha256": "1639336960253d2fde45fb7f20c4176af4fe5ad4"
+    }
+  },
+  {
+    "03457a8": {
+      "date": "2.3.2026",
+      "desc": "style wurde geupdated",
+      "link": "https://github.com/Lokrogaming/info/commit/03457a8b69f352e03c67ec375c7dd87ab252ad0e",
+      "files": {
+        "changed": ["src/style.css"]
+      },
+      "sha256": "03457a8b69f352e03c67ec375c7dd87ab252ad0e"
+    }
+  },
+  {
+    "faad692": {
+      "date": "2.3.2026",
+      "desc": "style wurde geupdated",
+      "link": "https://github.com/Lokrogaming/info/commit/faad69244c66fee343a754dc934a7475db570c2b",
+      "files": {
+        "changed": ["src/style.css"]
+      },
+      "sha256": "faad69244c66fee343a754dc934a7475db570c2b"
+    }
+  },
+  {
+    "faad692": {
+      "date": "2.3.2026",
+      "desc": "Tagebuch wurde geupdated",
+      "link": "https://github.com/Lokrogaming/info/commit/3d248933731ba0c28cdf3ee7acb6c21848309997",
+      "files": {
+        "changed": ["tagebuch.html"]
+      },
+      "sha256": "3d248933731ba0c28cdf3ee7acb6c21848309997"
+    }
+  },
+  {
+    "e4f5985": {
+      "date": "2.3.2026",
+      "desc": "Index wurde geupdated",
+      "link": "https://github.com/Lokrogaming/info/commit/e4f598558774818193b8229eda6ebdd9f2141dc1",
+      "files": {
+        "changed": ["index.html"]
+      },
+      "sha256": "e4f598558774818193b8229eda6ebdd9f2141dc1"
+    }
+  },
+  {
+    "0a5d7b1": {
+      "date": "8.3.2026",
+      "desc": "Hintergünde wurden entfernt und die Funktion für das Ändern der Hintergrundbilder ebenfalls",
+      "link": "https://github.com/Lokrogaming/info/commit/0a5d7b1ac3e82f675e156717904da8ae2e178752",
+      "files": {
+        "changed": ["index.html", "src/style.css", "unknown.html", "tagebuch.html"],
+        "deleted": ["src/bloodmoonBG.png", "src/darkCosmicBG.png"]
+      },
+      "sha256": "0a5d7b1ac3e82f675e156717904da8ae2e178752"
+    }
+  },
+  {
+    "1ca0ca9": {
+      "date": "9.3.2026",
+      "desc": "Dateien wurden geupdated",
+      "link": "https://github.com/Lokrogaming/info/commit/1ca0ca99db7211d845d49d444a332b619d9ce388",
+      "files": {
+        "changed": ["index.html", "src/style.css", "tagebuch.html"]
+      },
+      "sha256": "1ca0ca99db7211d845d49d444a332b619d9ce388"
+    }
+  },
+  {
+    "83d9e8e": {
+      "date": "10.3.2026",
+      "desc": "Budgettracker wurde erstellt und der Style wurde gefixt",
+      "link": "https://github.com/Lokrogaming/info/commit/83d9e8e03f4c894c6d063ea9e91a51260f9d3bca",
+      "files": {
+        "created": ["budgettracker.html", "src/budgetstyle.css", "LICENSE"],
+        "changed": ["src/style.css", "index.html", "tagebuch.html"]
+        
+      },
+      "sha256": "83d9e8e03f4c894c6d063ea9e91a51260f9d3bca"
+    }
+  },
+    {
+    "edbda8f": {
+      "date": "10.3.2026",
+      "desc": "Habe einen kleinen Pfeil geaddet der zum runterscrollen auffordern soll",
+      "link": "https://github.com/Lokrogaming/info/commit/edbda8f4b0caa528566f5c9401afe5a8d459379b",
+      "files": {
+        
+        "changed": ["src/budgetstyle.css", "budgettracker.html"]
+        
+      },
+      "sha256": "edbda8f4b0caa528566f5c9401afe5a8d459379b"
+    }
+  },
+  {
+    "c95dcb4": {
+      "date": "10.3.2026",
+      "desc": "Budgettracking script, helpsite and main budgettracker site were added",
+      "link": "https://github.com/Lokrogaming/info/commit/c95dcb471b5cd44ce8370942cfdb499d420f3506",
+      "files": {
+        
+        "changed": ["src/budgetstyle.css", "budgettracker.html"],
+        "created": ["src/helpstyle.css", "help.html", "dashboard.html"]
+        
+      },
+      "sha256": "c95dcb471b5cd44ce8370942cfdb499d420f3506"
+    }
+  },
+  
+];
+
+function createFileSection(title, files, className) {
+  if (!files) return "";
+
+  let list = "";
+  files.forEach(file => {
+    list += `<li>${file}</li>`;
+  });
+
+  return `
+    <p>${title}:</p>
+    <div class="filecard ${className}">
+      <ul class="no-dots">
+        ${list}
+      </ul>
+    </div>
+  `;
+}
+
+
+function loadTable() {
+  const table = document.getElementById("GHCT");
+
+  GHCList.forEach(commitObj => {
+
+    const key = Object.keys(commitObj)[0];
+    const data = commitObj[key];
+
+    const details = document.createElement("details");
+
+    const createdSection = createFileSection("Created", data.files.created, "created");
+    const changedSection = createFileSection("Changed", data.files.changed, "changed");
+    const deletedSection = createFileSection("Deleted", data.files.deleted, "deleted");
+    
+    const desc = data.desc ? data.desc : "";
+
+    details.innerHTML = `
+      <summary>
+        ${key} (${data.date})
+      </summary>
+      <a href="${data.link}" target="_blank">OPEN ON GITHUB :${key}</a><br>
+      <p>${desc}</p><br>
+      ${createdSection}
+      ${changedSection}
+      ${deletedSection}
+        
+        <p> SHA256-KEY: ${data.sha256}</p>
+    
+      `;
+
+    table.appendChild(details);
+
+  });
+}
+
+loadTable();
+</script>
+<script>
+
+
+    /* === ELEMENTS === */
+const buttonEl = document.getElementById("btnBig1");
+
+
+
+</script>
+<script>
+  function openLink(url) {
+  if (confirm("Redirecting to '" + url + "'")) {
+    window.open(url, "_blank");
+  } else {
+    alert("Redirect canceled!");
+  }
+}
+  </script>
+</body>
+</html>
+
+
